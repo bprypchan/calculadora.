@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <div class="contenedor">
+        
+
+        <div class="cuadrado">
+            <div class="ml-1 flex justify-center">
+                <p id="pantalla2" class="rounded-md bg-neutral-800 text-white text-3xl w-52 h-20 mt-3"> </p> <!--por que con input no me funciona?-->
+            </div>
+    
+            <div class="mt-5 ml-1 flex justify-center">
+                <button onclick="borrarTodo()" class="mb-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-orange-600 text-2xl">C</button>
+                <button onclick="evento()" id="borrar" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-orange-600 text-2xl">&larr;</button>
+                <button onclick="porcentaje('%')" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-lime-500 text-2xl">%</button>
+                <button onclick="simbolos('/')" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-lime-500 text-2xl">÷</button>
+            </div>
+            
+            <div class="mb-1 ml-1 flex justify-center">
+                <button onclick="seleccionar(7)" class="w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">7</button>
+                <button onclick="seleccionar(8)" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">8</button>
+                <button onclick="seleccionar(9)" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">9</button>
+                <button onclick="simbolos('*')" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-lime-500 text-2xl">X</button>
+            </div>
+            
+            <div class="mb-1 ml-1 flex justify-center">
+                <button onclick="seleccionar(4)" class="w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">4</button>
+                <button onclick="seleccionar(5)" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">5</button>
+                <button onclick="seleccionar(6)" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">6</button>
+                <button onclick="simbolos('-')" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-lime-500 text-2xl">-</button>
+            </div>
+    
+            <div class="mb-1 ml-1 flex justify-center">
+                <button onclick="seleccionar(1)" class="w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">1</button>
+                <button onclick="seleccionar(2)" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">2</button>
+                <button onclick="seleccionar(3)" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">3</button>
+                <button onclick="simbolos('+')" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-lime-500 text-2xl">+</button>
+            </div>
+    
+            <div class="ml-1 flex justify-center">
+                <button onclick="seleccionar(0)" class="ml-1 w-24 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">0</button>
+                <button onclick="simbolos('.')" class="ml-1 w-12 h-12 rounded-full bg-neutral-800 hover:bg-neutral-400 text-white text-2xl">.</button>
+                <button onclick="resultado('=')" class="ml-1 w-12 h-12 rounded-full bg-lime-500 hover:bg-lime-300 text-white text-2xl">=</button>
+            </div>
+        </div>  
+    </div>  
+</body>
+<script src="main.js"></script>
+</html>
